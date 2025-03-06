@@ -6,29 +6,36 @@
     <title>Flip Card Gallery</title>
     <style>
         body {
-            margin-top: 40vh;
+            margin-top: 10vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: auto;
             background-image: url(bg.png);
             background-position: center;
             background-size: cover;
             flex-direction: column;
+            padding-bottom: 20px;
         }
 
         .gallery {
-            margin-left: 34vh;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            width: 80%;
-            margin-top: 20px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 800px;
+            }
         }
 
         .flip-card {
             perspective: 1000px;
-            width: 280px;
+            width: 100%;
             height: 330px;
             opacity: 0;
             transform: translateY(50px);
@@ -83,6 +90,7 @@
             transform: rotateY(180deg);
             flex-direction: column;
             color: #fff;
+            text-align: center;
         }
 
         .register-button {
@@ -97,27 +105,19 @@
     </style>
 </head>
 <body>
-    <header>
-    <img src="newtitle.png" alter="img title">
-    </header>
+    <div class="top">
+        <center> <img src="newtitle.png" alt="title"></center> 
+    </div> 
     <div class="gallery">
-        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="1.png" alt="Front"></div><div class="flip-card-back"><h1>Future Unveiled in Papers ✨</h1><p>Showcase your innovative IoT research and ideas in this exciting paper presentation competition! Compete in two rounds—submit an abstract online and present your work live at the Center of IoT, and make an impact! 🚀</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfn0SfcaJ2iN5N47MtZtip3fRzNu74QcTDEQPmGYWceD_zZEg/viewform?usp=header" target="_blank"><button class="register-button">Register Now</button></a></div></div></div>
-        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="2.png" alt="Front"></div><div class="flip-card-back"><h1>Iot Quiz Event🏆</h1><p>A fast-paced quiz competition that tests your knowledge of IoT concepts, applications, and industry trends! Compete in two rounds—a preliminary screening and a high-stakes final round—to prove you're the ultimate IoT quiz champion! 🏆</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1i7dBe0J0aiGDDqMI0PfenGAJudtcD8H2GYfPsxiyT6VUcg/viewform?usp=header" target="_blank"><button class="register-button">Register Now</button></a></div></div></div>
-        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="3.png" alt="Front"></div><div class="flip-card-back"><h1>🔍 IoT Treasure Hunt 🏆</h1><p>Get ready for a thrilling tech adventure! Teams will solve IoT-based clues and race across the MIT campus to uncover the Digital Treasure! 💡⚡</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJrgk3mSi58Wd-xoD8dU0ytVU2eEYlePqlTF4fYD1OuZYavA/viewform?usp=header" target="_blank"><button class="register-button">Register Now</button></a></div></div></div>
-
-        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="5.png" alt="Front"></div><div class="flip-card-back"><h1>Welcome to the IoT Workshop🤖📡</h1><p>Discover how IoT connects the world by enabling devices to communicate, collect, and share data. 🌍🔗 Cloud platforms like AWS IoT, Azure IoT, and Google Cloud IoT help store and process massive data efficiently. ☁️📊 Get ready to explore the future of smart technology! 🚀</p>
-            <a href="https://forms.gle/wBFdqHTpmmvS8ab47" target="_blank"><button class="register-button">Register Now</button></a></div></div></div>
-        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="6.png" alt="Front"></div><div class="flip-card-back"><h1>MEME CONTEST IOT 🎭</h1><p>Where humor meets technology! Create hilarious IoT-themed memes and compete in two exciting rounds—an online submission round and a live final showdown at MIT Campus. Bring out your creativity, tech humor, and wit! 🎨🔥</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0hswW6H1Jng8QKurnDrIWh2VVPoFH787JQI6ae7uVQQBygw/viewform?usp=header" target="_blank"><button class="register-button">Register Now</button></a></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="1.png" alt="Front"></div><div class="flip-card-back"><h1>Future Unveiled in Papers ✨</h1><p>Showcase your innovative IoT research and ideas in this exciting paper presentation competition!</p><a href="#"><button class="register-button">Register Now</button></a></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="2.png" alt="Front"></div><div class="flip-card-back"><h1>IoT Quiz Event🏆</h1><p>A fast-paced quiz competition that tests your knowledge of IoT concepts!</p><a href="#"><button class="register-button">Register Now</button></a></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="3.png" alt="Front"></div><div class="flip-card-back"><h1>🔍 IoT Treasure Hunt 🏆</h1><p>Get ready for a thrilling tech adventure!</p><a href="#"><button class="register-button">Register Now</button></a></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="5.png" alt="Front"></div><div class="flip-card-back"><h1>IoT Workshop 🤖📡</h1><p>Discover how IoT connects the world!</p><a href="#"><button class="register-button">Register Now</button></a></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="6.png" alt="Front"></div><div class="flip-card-back"><h1>MEME CONTEST IOT 🎭</h1><p>Where humor meets technology!</p><a href="#"><button class="register-button">Register Now</button></a></div></div></div>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const cards = document.querySelectorAll(".flip-card");
-
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -125,7 +125,6 @@
                     }
                 });
             }, { threshold: 0.2 });
-
             cards.forEach(card => observer.observe(card));
         });
     </script>
