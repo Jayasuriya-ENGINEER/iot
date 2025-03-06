@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flip Card Gallery</title>
     <style>
+
+        @media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* Single column */
+    }
+}
+
         body {
             margin-top: 40vh;
             display: flex;
